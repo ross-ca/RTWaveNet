@@ -52,3 +52,9 @@ void modelLoader::loadModel(){
         //Layer creation code goes here
     }
 }
+
+WaveNet modelLoader::createRealTimeModel(){
+    WaveNet returnModel(numChannels, inputChannels, outputChannels, activation, dilations);
+    
+    return returnModel;
+}

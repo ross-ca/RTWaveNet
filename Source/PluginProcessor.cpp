@@ -9,6 +9,7 @@
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
 #include "modelLoader.h"
+#include "WaveNet.h"
 #include <iostream>
 
 //==============================================================================
@@ -97,8 +98,10 @@ void RTWaveNetAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBl
 {
     // Use this method as the place to do any pre-playback
     // initialisation that you need..
-    modelLoader model;
-    model.loadModel();
+    modelLoader loader;
+    loader.loadModel();
+    
+    WaveNet wavenet = loader.createRealTimeModel();
 }
 
 void RTWaveNetAudioProcessor::releaseResources()

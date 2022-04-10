@@ -11,18 +11,21 @@
 #pragma once
 #include <string>
 #include <vector>
+#include "WaveNet.h"
+
 using namespace std;
 
 class modelLoader{
 public:
     void loadModel();
+    WaveNet createRealTimeModel();
+    
+private:
+    string jsonFilePath = "/Users/ross/Documents/University/Project/Real-Time Implementation/RTWaveNet/Source/modelJSON.json";
     int numChannels;
     int inputChannels;
     int outputChannels;
     string activation;
     int filterWidth;
-    std::vector<int> dilations;
-    
-private:
-    string jsonFilePath = "/Users/ross/Documents/University/Project/Real-Time Implementation/RTWaveNet/Source/modelJSON.json";
+    vector<int> dilations;
 };
