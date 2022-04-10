@@ -1,7 +1,7 @@
 /*
   ==============================================================================
 
-    jsonLoader.h
+    modelLoader.h
     Created: 8 Apr 2022 5:37:27pm
     Author:  Ross Castledine
 
@@ -13,7 +13,7 @@
 #include <vector>
 using namespace std;
 
-class jsonLoader{
+class modelLoader{
 public:
     void loadModel();
     int numChannels;

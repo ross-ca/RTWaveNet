@@ -8,7 +8,7 @@
 
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
-#include "jsonLoader.h"
+#include "modelLoader.h"
 #include <iostream>
 
 //==============================================================================
@@ -97,7 +97,7 @@ void RTWaveNetAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBl
 {
     // Use this method as the place to do any pre-playback
     // initialisation that you need..
-    jsonLoader model;
+    modelLoader model;
     model.loadModel();
 }
 

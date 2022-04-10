@@ -5,8 +5,8 @@
               headerPath="/usr/local/&#10;/opt/homebrew/Cellar/nlohmann-json/3.10.5/include/">
   <MAINGROUP id="F7NY0r" name="RTWaveNet">
     <GROUP id="{F70FC1F2-88FF-B0A4-C434-9C17AEA8C907}" name="Source">
-      <FILE id="VrkPm1" name="jsonLoader.cpp" compile="1" resource="0" file="Source/jsonLoader.cpp"/>
-      <FILE id="HY0wSH" name="jsonLoader.h" compile="0" resource="0" file="Source/jsonLoader.h"/>
+      <FILE id="VrkPm1" name="modelLoader.cpp" compile="1" resource="0" file="Source/modelLoader.cpp"/>
+      <FILE id="HY0wSH" name="modelLoader.h" compile="0" resource="0" file="Source/modelLoader.h"/>
       <FILE id="ahSeDa" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
       <FILE id="aSSwkU" name="PluginProcessor.h" compile="0" resource="0"
