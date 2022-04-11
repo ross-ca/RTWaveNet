@@ -24,7 +24,17 @@ public:
         inputChannels = inputChannels;
         outputChannels = outputChannels;
         filterWidth = filterWidth;
+        
+        resetFifo();
+        resetKernel();
     };
+    
+    int getFilterOrder() const;
+    void setParams(size_t inputChannels, size_t outputChannels, int filterWidth, int dilation);
+    size_t getNumInputChannels(){ return inputChannels; }
+    size_t getNumOutputChannels() { return outputChannels; }
+    void process(float* data, int numSamples);
+    void setWeight(std::vector<float> W, std::string name);
     
 private:
     std::vector<Eigen::MatrixXf, Eigen::aligned_allocator<Eigen::MatrixXf>> kernel;
@@ -36,4 +46,14 @@ private:
     size_t inputChannels;
     size_t outputChannels;
     int filterWidth;
+    
+    void resetFifo();
+    void resetKernel();
+    void processSingleSample(float* data, int i, int numSamples);
+    
+    int mod(int a, int b);
+    int idx(int ch, int i, int numSamples);
+    
+    void setKernel(std::vector<float> W);
+    void setBias(std::vector<float> W);
 };
