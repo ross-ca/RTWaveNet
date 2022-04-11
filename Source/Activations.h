@@ -9,7 +9,7 @@
 */
 
 #pragma once
-#include <stdexcept>
+#include <string>
 
 namespace Activations {
     float tanh(float x);

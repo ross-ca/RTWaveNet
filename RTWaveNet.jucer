@@ -5,6 +5,10 @@
               headerPath="/usr/local/&#10;/opt/homebrew/Cellar/nlohmann-json/3.10.5/include/">
   <MAINGROUP id="F7NY0r" name="RTWaveNet">
     <GROUP id="{F70FC1F2-88FF-B0A4-C434-9C17AEA8C907}" name="Source">
+      <FILE id="uItbf3" name="ConvolutionLayer.cpp" compile="1" resource="0"
+            file="Source/ConvolutionLayer.cpp"/>
+      <FILE id="bFfLuh" name="ConvolutionLayer.h" compile="0" resource="0"
+            file="Source/ConvolutionLayer.h"/>
       <FILE id="OgzSp3" name="Activations.cpp" compile="1" resource="0" file="Source/Activations.cpp"/>
       <FILE id="lQkPUK" name="Activations.h" compile="0" resource="0" file="Source/Activations.h"/>
       <FILE id="D1JDJa" name="Convolution.cpp" compile="1" resource="0" file="Source/Convolution.cpp"/>
