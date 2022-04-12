@@ -16,7 +16,7 @@
 
 using json = nlohmann::json;
 
-void modelLoader::loadModel(){
+WaveNet modelLoader::loadModel(){
     
     //Load and parse json file
     std::ifstream inFile(modelLoader::jsonFilePath);
@@ -34,13 +34,16 @@ void modelLoader::loadModel(){
         dilations.push_back(jf["dilations"][i]);
     }
     
+    WaveNet returnModel(inputChannels, outputChannels, numChannels, filterWidth, activation, dilations);
+    returnModel.setParams(inputChannels, outputChannels, numChannels, filterWidth, activation, dilations);
+    
     json variables = jf["variables"];
     
     for (int i = 0; i < variables.size(); i++)
     {
         json currentLayer = variables[i];
         
-        int layer_idx = currentLayer["layer_idx"];
+        int layerIdx = currentLayer["layer_idx"];
         string name = currentLayer["name"];
         std::vector<float> data;
         
@@ -49,12 +52,8 @@ void modelLoader::loadModel(){
             data.push_back(std::stof(currentLayer["data"][j].get<string>()));
         }
         
-        //Layer creation code goes here
+        returnModel.setWeight(data, layerIdx, name);
     }
-}
-
-WaveNet modelLoader::createRealTimeModel(){
-    WaveNet returnModel(numChannels, inputChannels, outputChannels, activation, dilations);
     
     return returnModel;
 }

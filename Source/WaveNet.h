@@ -2,33 +2,48 @@
   ==============================================================================
 
     WaveNet.h
-    Created: 10 Apr 2022 7:13:10pm
-    Author:  Ross Castledine
+    Created: 14 Jan 2019 5:19:01pm
+    Author:  Damskägg Eero-Pekka
 
   ==============================================================================
 */
 
 #pragma once
+
 #include <string>
-#include <vector>
+#include "../JuceLibraryCode/JuceHeader.h"
+#include "Activations.h"
+#include "ConvolutionStack.h"
 
-using namespace std;
-
-class WaveNet{
+class WaveNet
+{
 public:
-    //Define Constructor
-    WaveNet(int convChannels, int inputChannels, int outputChannels, string activation, vector<int> dilations)
-    {
-        convChannels = convChannels;
-        inputChannels = inputChannels;
-        outputChannels = outputChannels;
-        activation = activation;
-        dilations = dilations;
-    };
+    WaveNet(int inputChannels, int outputChannels, int convolutionChannels,
+            int filterWidth, std::string activation, std::vector<int> dilations);
+    void prepareToPlay (int newSamplesPerBlock);
+    void process(const float **inputData, float **outputData, int numSamples);
+    void setWeight(std::vector<float> W, int layerIdx, std::string name);
+    void setParams(int newInputChannels, int newOutputChannels, int newConvChannels,
+                   int newFilterWidth, std::string newActivation,
+                   std::vector<int> newDilations);
+    
 private:
-    int convChannels;
+    ConvolutionStack convStack;
+    ConvolutionLayer inputLayer;
+    ConvolutionLayer outputLayer;
     int inputChannels;
     int outputChannels;
-    string activation;
-    vector<int> dilations;
+    int filterWidth;
+    int skipChannels;
+    int convolutionChannels;
+    int memoryChannels;
+    std::string activation;
+    std::vector<int> dilations;
+    int samplesPerBlock = 0;
+    juce::AudioBuffer<float> convData;
+    juce::AudioBuffer<float> skipData;
+    
+    int idx(int ch, int i, int numSamples);
+    void copyInputData(const float **inputData, int numSamples);
+    void copyOutputData(float **outputData, int numSamples);
 };

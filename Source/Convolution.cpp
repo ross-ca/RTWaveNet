@@ -2,13 +2,27 @@
   ==============================================================================
 
     Convolution.cpp
-    Created: 10 Apr 2022 8:11:58pm
-    Author:  Ross Castledine
+    Created: 3 Jan 2019 10:58:34am
+    Author:  Damskägg Eero-Pekka
 
   ==============================================================================
 */
 
 #include "Convolution.h"
+#include <iostream>
+
+Convolution::Convolution(size_t inputChannels, size_t outputChannels, int filterWidth, int dilation) :
+    bias(outputChannels),
+    outVec(outputChannels),
+    pos(0),
+    dilation(dilation),
+    inputChannels(inputChannels),
+    outputChannels(outputChannels),
+    filterWidth(filterWidth)
+{
+    resetFifo();
+    resetKernel();
+}
 
 void Convolution::resetKernel()
 {
@@ -37,57 +51,53 @@ void Convolution::resetFifo()
     pos = 0;
 }
 
-void Convolution::setParams(size_t newInputChannels, size_t newOutputChannels, int newFilterWidth, int newDilation)
+void Convolution::setParams(size_t newInputChannels, size_t newOutputChannels,
+                            int newFilterWidth, int newDilation)
 {
     inputChannels = newInputChannels;
     outputChannels = newOutputChannels;
     filterWidth = newFilterWidth;
     dilation = newDilation;
-    outVec = Eigen::RowVectorXf(outputChannels);
+    outVec = Eigen::RowVectorXf (outputChannels);
     resetFifo();
     resetKernel();
 }
 
 int Convolution::getFilterOrder() const
 {
-    return (filterWidth - 1) * dilation + 1;
+    return (filterWidth-1)*dilation + 1;
 }
 
-void Convolution::process(float *data, int numSamples)
+void Convolution::process(float* data, int numSamples)
 {
     for (int i = 0; i < numSamples; ++i)
     {
-        processSingleSample(data, i, numSamples);
+        processSingleSample(data, i , numSamples);
     }
 }
 
-void Convolution::processSingleSample(float *data, int i, int numSamples)
+void Convolution::processSingleSample(float* data, int i, int numSamples)
 {
     if (memory.size() != getFilterOrder())
-    {
         resetFifo();
-    }
     auto fifo = memory.begin();
     for (int ch = 0; ch < inputChannels; ++ch)
-    {
-        (*(fifo + pos))[ch] = data[idx(ch, i, numSamples)];
-    }
+        (*(fifo+pos))[ch] = data[idx(ch, i, numSamples)];
     outVec.setZero();
     std::vector<Eigen::MatrixXf>::iterator it;
     int j = 0;
     for (auto it = kernel.begin(); it != kernel.end(); it++)
     {
         int readPos = mod((pos - j * dilation), getFilterOrder());
-        outVec = outVec + *(fifo + readPos) * (*it);
-        j++;
+        outVec = outVec + *(fifo+readPos) * (*it);
+        j += 1;
     }
     outVec = outVec + bias;
     for (int ch = 0; ch < outputChannels; ++ch)
-    {
         data[idx(ch, i, numSamples)] = outVec[ch];
-    }
     pos = mod(pos + 1, getFilterOrder());
 }
+
 
 int Convolution::mod(int a, int b)
 {
@@ -103,37 +113,28 @@ int Convolution::idx(int ch, int i, int numSamples)
 void Convolution::setWeight(std::vector<float> W, std::string name)
 {
     if (name == "W")
-    {
         setKernel(W);
-    }
     else if (name == "b")
-    {
         setBias(W);
-    }
 }
 
 void Convolution::setKernel(std::vector<float> W)
 {
-    assert(W.size() == inputChannels * outputChannels * filterWidth);
+    
+    assert(W.size() == inputChannels*outputChannels*filterWidth);
     size_t i = 0;
     for (size_t k = 0; k < filterWidth; ++k)
-    {
-        for (size_t row = 0; row < inputChannels; ++row)
-        {
+        for(size_t row = 0; row < inputChannels; ++row)
             for (size_t col = 0; col < outputChannels; ++col)
             {
-                kernel[filterWidth - 1 - k](row, col) = W[i];
-                i++;
+                kernel[filterWidth-1-k](row,col) = W[i];
+                i += 1;
             }
-        }
-    }
 }
 
 void Convolution::setBias(std::vector<float> W)
 {
     assert(W.size() == outputChannels);
     for (size_t i = 0; i < outputChannels; ++i)
-    {
         bias(i) = W[i];
-    }
 }

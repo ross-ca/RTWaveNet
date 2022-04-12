@@ -17,8 +17,7 @@ using namespace std;
 
 class modelLoader{
 public:
-    void loadModel();
-    WaveNet createRealTimeModel();
+    WaveNet loadModel();
     
 private:
     string jsonFilePath = "/Users/ross/Documents/University/Project/Real-Time Implementation/RTWaveNet/Source/modelJSON.json";

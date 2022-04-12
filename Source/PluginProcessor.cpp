@@ -22,7 +22,8 @@ RTWaveNetAudioProcessor::RTWaveNetAudioProcessor()
                       #endif
                        .withOutput ("Output", juce::AudioChannelSet::stereo(), true)
                      #endif
-                       )
+                       ),
+model(1, 1, 1, 1, "linear", {1})
 #endif
 {
 }
@@ -96,12 +97,11 @@ void RTWaveNetAudioProcessor::changeProgramName (int index, const juce::String& 
 //==============================================================================
 void RTWaveNetAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
+    modelLoader loader;
+    model = loader.loadModel();
+    model.prepareToPlay(samplesPerBlock);
     // Use this method as the place to do any pre-playback
     // initialisation that you need..
-    modelLoader loader;
-    loader.loadModel();
-    
-    WaveNet wavenet = loader.createRealTimeModel();
 }
 
 void RTWaveNetAudioProcessor::releaseResources()
@@ -139,11 +139,14 @@ bool RTWaveNetAudioProcessor::isBusesLayoutSupported (const BusesLayout& layouts
 void RTWaveNetAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midiMessages)
 {
     juce::ScopedNoDenormals noDenormals;
-    auto totalNumInputChannels  = getTotalNumInputChannels();
-    auto totalNumOutputChannels = getTotalNumOutputChannels();
+    //auto totalNumInputChannels  = getTotalNumInputChannels();
+    //auto totalNumOutputChannels = getTotalNumOutputChannels();
     
     buffer.applyGain(juce::Decibels::decibelsToGain(addedInGain));
-    
+    model.process(buffer.getArrayOfReadPointers(), buffer.getArrayOfWritePointers(), buffer.getNumSamples());
+    for (int ch = 1; ch < buffer.getNumChannels(); ++ch)
+        buffer.copyFrom(ch, 0, buffer, 0, 0, buffer.getNumSamples());
+    /*
     // In case we have more outputs than inputs, this code clears any output
     // channels that didn't contain input data, (because these aren't
     // guaranteed to be empty - they may contain garbage).
@@ -165,6 +168,7 @@ void RTWaveNetAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, ju
 
         // ..do something to the data...
     }
+     */
 }
 
 //==============================================================================

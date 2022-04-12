@@ -2,47 +2,60 @@
   ==============================================================================
 
     ConvolutionLayer.cpp
-    Created: 11 Apr 2022 5:35:51pm
-    Author:  Ross Castledine
+    Created: 10 Jan 2019 5:04:39pm
+    Author:  Damskägg Eero-Pekka
 
   ==============================================================================
 */
 
 #include "ConvolutionLayer.h"
 
-ConvolutionLayer::ConvolutionLayer(size_t inputChannels, size_t outputChannels, int filterWidth, int dilation, bool residual, std::string activationname):
-conv(inputChannels, Activations::isGated(activationname) ? outputChannels * 2 : outputChannels, filterWidth, dilation),
-out1x1(inputChannels, outputChannels, 1, 1),
+ConvolutionLayer::ConvolutionLayer(size_t inputChannels,
+                                   size_t outputChannels,
+                                   int filterWidth,
+                                   int dilation,
+                                   bool residual,
+                                   std::string activationName):
+conv(inputChannels,
+     Activations::isGated(activationName) ? outputChannels * 2 : outputChannels,
+     filterWidth,
+     dilation),
+out1x1(outputChannels, outputChannels, 1, 1),
 residual(residual),
-usesGating(Activations::isGated(activationname)),
-activation(Activations::getActivationFuncArray(activationname))
-{}
-
-void ConvolutionLayer::process(float *data, int numSamples)
+usesGating(Activations::isGated(activationName)),
+activation(Activations::getActivationFuncArray(activationName))
 {
-    conv.process(data, numSamples);
-    activation(data, conv.getNumOutputChannels(), numSamples);
-    if (residual)
-        out1x1.process(data, numSamples);
 }
 
-void ConvolutionLayer::process(float *data, float *skipdata, int numSamples)
+void ConvolutionLayer::process(float* data, int numSamples)
 {
     conv.process(data, numSamples);
     activation(data, conv.getNumOutputChannels(), numSamples);
-    copySkipData(data, skipdata, numSamples);
-    if (residual)
+    if (residual) {
         out1x1.process(data, numSamples);
+    }
+}
+
+void ConvolutionLayer::process(float* data, float* skipData, int numSamples)
+{
+    conv.process(data, numSamples);
+    activation(data, conv.getNumOutputChannels(), numSamples);
+    copySkipData(data, skipData, numSamples);
+    if (residual) {
+        out1x1.process(data, numSamples);
+    }
 }
 
 void ConvolutionLayer::copySkipData(float *data, float *skipData, int numSamples)
 {
-    size_t skipChannels = usesGating ? conv.getNumOutputChannels() / 2 : conv.getNumOutputChannels();
-    for (size_t i = 0; i < (size_t)numSamples * skipChannels; ++ i)
+    size_t skipChannels = usesGating ? conv.getNumOutputChannels()/2 : conv.getNumOutputChannels();
+    for (size_t i = 0; i < (size_t)numSamples*skipChannels; ++i)
         skipData[i] = data[i];
 }
 
-void ConvolutionLayer::setParams(size_t newInputChannels, size_t newOutputChannels, int newFilterWidth, int newDilation, bool newResidual, std::string newActivationName)
+void ConvolutionLayer::setParams(size_t newInputChannels, size_t newOutputChannels,
+                                 int newFilterWidth, int newDilation, bool newResidual,
+                                 std::string newActivationName)
 {
     activation = Activations::getActivationFuncArray(newActivationName);
     usesGating = Activations::isGated(newActivationName);
