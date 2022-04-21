@@ -5,6 +5,8 @@
               headerPath="/usr/local/&#10;/opt/homebrew/Cellar/nlohmann-json/3.10.5/include/">
   <MAINGROUP id="F7NY0r" name="RTWaveNet">
     <GROUP id="{F70FC1F2-88FF-B0A4-C434-9C17AEA8C907}" name="Source">
+      <FILE id="p66yEu" name="Knob.cpp" compile="1" resource="0" file="Source/Knob.cpp"/>
+      <FILE id="Omp4bK" name="Knob.h" compile="0" resource="0" file="Source/Knob.h"/>
       <FILE id="U6TJJU" name="ConvolutionStack.cpp" compile="1" resource="0"
             file="Source/ConvolutionStack.cpp"/>
       <FILE id="C9q50R" name="ConvolutionStack.h" compile="0" resource="0"

@@ -55,6 +55,7 @@ public:
     void setStateInformation (const void* data, int sizeInBytes) override;
     
     float addedInGain;
+    float addedOutGain;
     WaveNet model;
 
 private:

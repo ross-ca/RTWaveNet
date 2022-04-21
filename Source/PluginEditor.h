@@ -8,8 +8,10 @@
 
 #pragma once
 
+#include <iostream>
 #include <JuceHeader.h>
 #include "PluginProcessor.h"
+#include "Knob.h"
 
 //==============================================================================
 /**
@@ -30,7 +32,9 @@ private:
     // access the processor object that created it.
     RTWaveNetAudioProcessor& audioProcessor;
 
-    juce::Slider inputGain;
+    juce::Image knobImage = juce::ImageCache::getFromFile(juce::File("/Users/ross/Documents/University/Project/Real-Time Implementation/RTWaveNet/Resources/Images/org_amp.png"));
+    Knob* inGain = new Knob(knobImage);
+    Knob* outGain = new Knob(knobImage);
     
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (RTWaveNetAudioProcessorEditor)
 };

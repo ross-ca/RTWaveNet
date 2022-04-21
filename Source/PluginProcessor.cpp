@@ -143,9 +143,12 @@ void RTWaveNetAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, ju
     //auto totalNumOutputChannels = getTotalNumOutputChannels();
     
     buffer.applyGain(juce::Decibels::decibelsToGain(addedInGain));
+    
     model.process(buffer.getArrayOfReadPointers(), buffer.getArrayOfWritePointers(), buffer.getNumSamples());
     for (int ch = 1; ch < buffer.getNumChannels(); ++ch)
         buffer.copyFrom(ch, 0, buffer, 0, 0, buffer.getNumSamples());
+    
+    buffer.applyGain(juce::Decibels::decibelsToGain(addedOutGain));
     /*
     // In case we have more outputs than inputs, this code clears any output
     // channels that didn't contain input data, (because these aren't
