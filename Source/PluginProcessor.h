@@ -56,6 +56,7 @@ public:
     
     float addedInGain;
     float addedOutGain;
+    float trimVal;
     WaveNet model;
 
 private:

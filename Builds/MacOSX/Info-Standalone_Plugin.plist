@@ -8,7 +8,7 @@
     <key>CFBundleIconFile</key>
     <string></string>
     <key>CFBundleIdentifier</key>
-    <string>com.yourcompany.RTWaveNet</string>
+    <string>com.RossCastledine.RTWaveNet</string>
     <key>CFBundleName</key>
     <string>RTWaveNet</string>
     <key>CFBundleDisplayName</key>

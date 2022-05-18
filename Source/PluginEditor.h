@@ -33,8 +33,10 @@ private:
     RTWaveNetAudioProcessor& audioProcessor;
 
     juce::Image knobImage = juce::ImageCache::getFromFile(juce::File("/Users/ross/Documents/University/Project/Real-Time Implementation/RTWaveNet/Resources/Images/org_amp.png"));
+    juce::Image trimImage = juce::ImageCache::getFromFile(juce::File("/Users/ross/Documents/University/Project/Real-Time Implementation/RTWaveNet/Resources/Images/screwhead.png"));
     Knob* inGain = new Knob(knobImage);
     Knob* outGain = new Knob(knobImage);
+    Knob* trim = new Knob(trimImage);
     
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (RTWaveNetAudioProcessorEditor)
 };

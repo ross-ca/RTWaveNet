@@ -8,11 +8,20 @@
 
 namespace BinaryData
 {
+    extern const char*   screwhead_png;
+    const int            screwhead_pngSize = 33546;
+
+    extern const char*   org_amp_png;
+    const int            org_amp_pngSize = 261739;
+
+    extern const char*   WaveNetAmp_png;
+    const int            WaveNetAmp_pngSize = 39927;
+
     extern const char*   modelJSON_json;
     const int            modelJSON_jsonSize = 328093;
 
     // Number of elements in the namedResourceList and originalFileNames arrays.
-    const int namedResourceListSize = 1;
+    const int namedResourceListSize = 4;
 
     // Points to the start of a list of resource names.
     extern const char* namedResourceList[];

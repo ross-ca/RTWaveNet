@@ -33,7 +33,6 @@
 		1D5DB8B5AFDFC2270600D487 /* include_juce_gui_basics.mm */ = {isa = PBXBuildFile; fileRef = B171EC949B830498AB5569E0; };
 		1E3C79E1514EE56CBAA0DC8B /* Foundation.framework */ = {isa = PBXBuildFile; fileRef = 10769BB897B3C538DF2EE184; };
 		22B222B63BD48E9B8DCA1ED1 /* QuartzCore.framework */ = {isa = PBXBuildFile; fileRef = DB9AB0E4CC03C308BA4BC134; };
-		26EFAC2779735E21F17CDC9C /* Knob.cpp */ = {isa = PBXBuildFile; fileRef = 0F450B1855619DDE6FCAD32D; };
 		28CD8E9FC12667E8F54E2B00 /* include_juce_graphics.mm */ = {isa = PBXBuildFile; fileRef = 54BA54BEEC2357EEFBC01145; };
 		2B2DAB468091E382F8099E38 /* include_juce_gui_extra.mm */ = {isa = PBXBuildFile; fileRef = AA1DC332D7DC977D34693C17; };
 		35E4CE93448D0937B39ACD51 /* include_juce_audio_formats.mm */ = {isa = PBXBuildFile; fileRef = DABFB64AB68785AFA973A31B; };
@@ -73,7 +72,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0F450B1855619DDE6FCAD32D /* Knob.cpp */ /* Knob.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Knob.cpp; path = ../../Source/Knob.cpp; sourceTree = SOURCE_ROOT; };
+		03648CC8D74DC4310459481D /* screwhead.png */ /* screwhead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = screwhead.png; path = ../../Resources/Images/screwhead.png; sourceTree = SOURCE_ROOT; };
+		089FA8D74F59163FEFD0522E /* WaveNetAmp.png */ /* WaveNetAmp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = WaveNetAmp.png; path = ../../Resources/Images/WaveNetAmp.png; sourceTree = SOURCE_ROOT; };
 		10769BB897B3C538DF2EE184 /* Foundation.framework */ /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		16055BD49813D349AA532DC8 /* PluginEditor.cpp */ /* PluginEditor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = PluginEditor.cpp; path = ../../Source/PluginEditor.cpp; sourceTree = SOURCE_ROOT; };
 		16847E2411A0A2D831F8713B /* Convolution.h */ /* Convolution.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Convolution.h; path = ../../Source/Convolution.h; sourceTree = SOURCE_ROOT; };
@@ -82,22 +82,24 @@
 		22199B45D7800F6E974EC3B7 /* modelJSON.json */ /* modelJSON.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; name = modelJSON.json; path = ../../Source/modelJSON.json; sourceTree = SOURCE_ROOT; };
 		22FD8C9A29405BF18B336752 /* DiscRecording.framework */ /* DiscRecording.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiscRecording.framework; path = System/Library/Frameworks/DiscRecording.framework; sourceTree = SDKROOT; };
 		2331D702D8BC4A238AC1BDC3 /* BinaryData.h */ /* BinaryData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BinaryData.h; path = ../../JuceLibraryCode/BinaryData.h; sourceTree = SOURCE_ROOT; };
-		2601C5BC895EF63A4A337C8F /* juce_gui_extra */ /* juce_gui_extra */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_gui_extra; path = "/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_gui_extra"; sourceTree = "<absolute>"; };
+		265812DBE24338D2C90381E0 /* juce_events */ /* juce_events */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_events; path = /Applications/JUCE/modules/juce_events; sourceTree = "<absolute>"; };
+		2819A805DFF68478676BE765 /* juce_gui_extra */ /* juce_gui_extra */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_gui_extra; path = /Applications/JUCE/modules/juce_gui_extra; sourceTree = "<absolute>"; };
 		2B272579ED0C993A76224EAB /* PluginProcessor.cpp */ /* PluginProcessor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = PluginProcessor.cpp; path = ../../Source/PluginProcessor.cpp; sourceTree = SOURCE_ROOT; };
 		2C6CD89E4FE0AD85B0CA3A8D /* AudioToolbox.framework */ /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		2DC4DBE4C76DAF36792D3D35 /* juce_audio_plugin_client */ /* juce_audio_plugin_client */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_plugin_client; path = "/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_audio_plugin_client"; sourceTree = "<absolute>"; };
 		337E5A12708DAC0DF56FB599 /* Knob.h */ /* Knob.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Knob.h; path = ../../Source/Knob.h; sourceTree = SOURCE_ROOT; };
 		3475F67F4355C10E3248622F /* include_juce_audio_utils.mm */ /* include_juce_audio_utils.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_audio_utils.mm; path = ../../JuceLibraryCode/include_juce_audio_utils.mm; sourceTree = SOURCE_ROOT; };
 		3B13838A8DDBACEF863C02F2 /* Standalone Plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RTWaveNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B780278CE79F1A862A1FA51 /* Accelerate.framework */ /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		3C2281032AEABDA4E56A6409 /* juce_audio_devices */ /* juce_audio_devices */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_devices; path = /Applications/JUCE/modules/juce_audio_devices; sourceTree = "<absolute>"; };
 		3F2E7D4622139787F4A19FC9 /* ConvolutionStack.h */ /* ConvolutionStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ConvolutionStack.h; path = ../../Source/ConvolutionStack.h; sourceTree = SOURCE_ROOT; };
-		3F5678C2366DC982B87FE07D /* juce_audio_utils */ /* juce_audio_utils */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_utils; path = "/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_audio_utils"; sourceTree = "<absolute>"; };
 		41156B375DBC87EE3E93D7BF /* include_juce_audio_plugin_client_VST_utils.mm */ /* include_juce_audio_plugin_client_VST_utils.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_audio_plugin_client_VST_utils.mm; path = ../../JuceLibraryCode/include_juce_audio_plugin_client_VST_utils.mm; sourceTree = SOURCE_ROOT; };
 		4846A289A9B3803A92466D79 /* include_juce_audio_plugin_client_VST3.cpp */ /* include_juce_audio_plugin_client_VST3.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = include_juce_audio_plugin_client_VST3.cpp; path = ../../JuceLibraryCode/include_juce_audio_plugin_client_VST3.cpp; sourceTree = SOURCE_ROOT; };
+		48C8AF6556006CBA69A7D26C /* juce_graphics */ /* juce_graphics */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_graphics; path = /Applications/JUCE/modules/juce_graphics; sourceTree = "<absolute>"; };
 		4939B533BDCDC19FEA09CC9F /* PluginEditor.h */ /* PluginEditor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PluginEditor.h; path = ../../Source/PluginEditor.h; sourceTree = SOURCE_ROOT; };
+		498CAE34D8FAEE91801A1A05 /* juce_data_structures */ /* juce_data_structures */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_data_structures; path = /Applications/JUCE/modules/juce_data_structures; sourceTree = "<absolute>"; };
+		4CF8D7EE9ABF513269375472 /* juce_audio_utils */ /* juce_audio_utils */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_utils; path = /Applications/JUCE/modules/juce_audio_utils; sourceTree = "<absolute>"; };
 		4D1D55C2B551F173D53133AA /* modelLoader.cpp */ /* modelLoader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = modelLoader.cpp; path = ../../Source/modelLoader.cpp; sourceTree = SOURCE_ROOT; };
 		53711062F4D067BC77C06C4C /* AU */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RTWaveNet.component; sourceTree = BUILT_PRODUCTS_DIR; };
-		543972E230B617DD381BF012 /* juce_audio_processors */ /* juce_audio_processors */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_processors; path = "/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_audio_processors"; sourceTree = "<absolute>"; };
 		54996CBA81845EED5C10E0F1 /* Activations.cpp */ /* Activations.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Activations.cpp; path = ../../Source/Activations.cpp; sourceTree = SOURCE_ROOT; };
 		54BA54BEEC2357EEFBC01145 /* include_juce_graphics.mm */ /* include_juce_graphics.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_graphics.mm; path = ../../JuceLibraryCode/include_juce_graphics.mm; sourceTree = SOURCE_ROOT; };
 		59397580FD5F5CD48117E03B /* include_juce_events.mm */ /* include_juce_events.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_events.mm; path = ../../JuceLibraryCode/include_juce_events.mm; sourceTree = SOURCE_ROOT; };
@@ -106,9 +108,10 @@
 		5EF868F6D76331B7E1D9D968 /* JuceHeader.h */ /* JuceHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JuceHeader.h; path = ../../JuceLibraryCode/JuceHeader.h; sourceTree = SOURCE_ROOT; };
 		608700C7A64650C77BD6E40D /* Shared Code */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRTWaveNet.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		625D4D8014B421E8BA3C5C42 /* include_juce_audio_plugin_client_AU_1.mm */ /* include_juce_audio_plugin_client_AU_1.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_audio_plugin_client_AU_1.mm; path = ../../JuceLibraryCode/include_juce_audio_plugin_client_AU_1.mm; sourceTree = SOURCE_ROOT; };
-		667E147790C5540D5387F3F6 /* juce_audio_devices */ /* juce_audio_devices */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_devices; path = "/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_audio_devices"; sourceTree = "<absolute>"; };
 		6812F7E20EC01F7ED87136D7 /* Info-Standalone_Plugin.plist */ /* Info-Standalone_Plugin.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-Standalone_Plugin.plist"; path = "Info-Standalone_Plugin.plist"; sourceTree = SOURCE_ROOT; };
+		68A798D319B34ED0797D7472 /* juce_audio_plugin_client */ /* juce_audio_plugin_client */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_plugin_client; path = /Applications/JUCE/modules/juce_audio_plugin_client; sourceTree = "<absolute>"; };
 		69E8F7F62C05483CDAFFB91B /* BinaryData.cpp */ /* BinaryData.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = BinaryData.cpp; path = ../../JuceLibraryCode/BinaryData.cpp; sourceTree = SOURCE_ROOT; };
+		6B356ED36CBBBA8924074CBF /* juce_core */ /* juce_core */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_core; path = /Applications/JUCE/modules/juce_core; sourceTree = "<absolute>"; };
 		6D89827B985D6BA902578C09 /* include_juce_audio_plugin_client_utils.cpp */ /* include_juce_audio_plugin_client_utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = include_juce_audio_plugin_client_utils.cpp; path = ../../JuceLibraryCode/include_juce_audio_plugin_client_utils.cpp; sourceTree = SOURCE_ROOT; };
 		72AC935CA5435FF5F71A087A /* CoreAudioKit.framework */ /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = System/Library/Frameworks/CoreAudioKit.framework; sourceTree = SDKROOT; };
 		755C18C7A3791E1CDBEA6E75 /* CoreMIDI.framework */ /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
@@ -118,9 +121,8 @@
 		7BDD6896AF3FB8C8AE8AFC06 /* modelLoader.h */ /* modelLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = modelLoader.h; path = ../../Source/modelLoader.h; sourceTree = SOURCE_ROOT; };
 		7F7D0A32B82158E4D635A223 /* CoreAudio.framework */ /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		87901F1ADB70C23363E7BF55 /* VST3 */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RTWaveNet.vst3; sourceTree = BUILT_PRODUCTS_DIR; };
-		8CCFFDF679634BAD038AB032 /* juce_audio_formats */ /* juce_audio_formats */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_formats; path = "/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_audio_formats"; sourceTree = "<absolute>"; };
-		939E1DADF499BBDE2C3AB3CC /* juce_gui_basics */ /* juce_gui_basics */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_gui_basics; path = "/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_gui_basics"; sourceTree = "<absolute>"; };
-		95CFB0905DED7951C7256AB0 /* juce_core */ /* juce_core */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_core; path = "/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_core"; sourceTree = "<absolute>"; };
+		8D416BF53B0E45CE6169B5CF /* juce_audio_basics */ /* juce_audio_basics */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_basics; path = /Applications/JUCE/modules/juce_audio_basics; sourceTree = "<absolute>"; };
+		9835FBE41E9FF7BEB15BE7AE /* juce_audio_processors */ /* juce_audio_processors */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_processors; path = /Applications/JUCE/modules/juce_audio_processors; sourceTree = "<absolute>"; };
 		989998C25110C80D43BF692A /* Carbon.framework */ /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		991F9ED3825FFD535BA08708 /* include_juce_core.mm */ /* include_juce_core.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_core.mm; path = ../../JuceLibraryCode/include_juce_core.mm; sourceTree = SOURCE_ROOT; };
 		A8510FA2DC3D53C020622542 /* include_juce_audio_plugin_client_Standalone.cpp */ /* include_juce_audio_plugin_client_Standalone.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = include_juce_audio_plugin_client_Standalone.cpp; path = ../../JuceLibraryCode/include_juce_audio_plugin_client_Standalone.cpp; sourceTree = SOURCE_ROOT; };
@@ -130,18 +132,17 @@
 		B1B347589A69297C29227E96 /* include_juce_audio_devices.mm */ /* include_juce_audio_devices.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_audio_devices.mm; path = ../../JuceLibraryCode/include_juce_audio_devices.mm; sourceTree = SOURCE_ROOT; };
 		B1DE00E656F4A0445B170E60 /* IOKit.framework */ /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		BC56D8D628E0D393815B5387 /* include_juce_audio_processors.mm */ /* include_juce_audio_processors.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_audio_processors.mm; path = ../../JuceLibraryCode/include_juce_audio_processors.mm; sourceTree = SOURCE_ROOT; };
+		BE55002A64D9B2D581023EC0 /* juce_gui_basics */ /* juce_gui_basics */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_gui_basics; path = /Applications/JUCE/modules/juce_gui_basics; sourceTree = "<absolute>"; };
 		C3A764B8C8FC0B8FA5C408E5 /* include_juce_audio_basics.mm */ /* include_juce_audio_basics.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_audio_basics.mm; path = ../../JuceLibraryCode/include_juce_audio_basics.mm; sourceTree = SOURCE_ROOT; };
-		C7979FFD14FE8E0C438DB731 /* juce_audio_basics */ /* juce_audio_basics */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_basics; path = "/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_audio_basics"; sourceTree = "<absolute>"; };
-		CC06253DB54EAF77D9ACF1AA /* juce_events */ /* juce_events */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_events; path = "/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_events"; sourceTree = "<absolute>"; };
-		CE4136CC1FEDD46C8100BC18 /* juce_data_structures */ /* juce_data_structures */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_data_structures; path = "/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_data_structures"; sourceTree = "<absolute>"; };
-		DA9B8E6275CDE167D0A04F5E /* juce_graphics */ /* juce_graphics */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_graphics; path = "/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_graphics"; sourceTree = "<absolute>"; };
 		DABFB64AB68785AFA973A31B /* include_juce_audio_formats.mm */ /* include_juce_audio_formats.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_audio_formats.mm; path = ../../JuceLibraryCode/include_juce_audio_formats.mm; sourceTree = SOURCE_ROOT; };
 		DB9AB0E4CC03C308BA4BC134 /* QuartzCore.framework */ /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DE8EE6A177A01180FBBCB884 /* ConvolutionLayer.cpp */ /* ConvolutionLayer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ConvolutionLayer.cpp; path = ../../Source/ConvolutionLayer.cpp; sourceTree = SOURCE_ROOT; };
 		E4DE3D02A6CC49623D21282F /* Convolution.cpp */ /* Convolution.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Convolution.cpp; path = ../../Source/Convolution.cpp; sourceTree = SOURCE_ROOT; };
 		E6AF91FE791310D24512273A /* Info-VST3.plist */ /* Info-VST3.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-VST3.plist"; path = "Info-VST3.plist"; sourceTree = SOURCE_ROOT; };
 		E7D45E48D67E4F656D04749B /* JucePluginDefines.h */ /* JucePluginDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JucePluginDefines.h; path = ../../JuceLibraryCode/JucePluginDefines.h; sourceTree = SOURCE_ROOT; };
+		ECDB38E875873E17A114D5CF /* juce_audio_formats */ /* juce_audio_formats */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_formats; path = /Applications/JUCE/modules/juce_audio_formats; sourceTree = "<absolute>"; };
 		EE968C9986ECD00990B9C1CD /* RecentFilesMenuTemplate.nib */ /* RecentFilesMenuTemplate.nib */ = {isa = PBXFileReference; lastKnownFileType = file.nib; name = RecentFilesMenuTemplate.nib; path = RecentFilesMenuTemplate.nib; sourceTree = SOURCE_ROOT; };
+		F1581BFC0553634E9BF136D9 /* org_amp.png */ /* org_amp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = org_amp.png; path = ../../Resources/Images/org_amp.png; sourceTree = SOURCE_ROOT; };
 		F83F9315CAB0BE439D2D8653 /* Activations.h */ /* Activations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Activations.h; path = ../../Source/Activations.h; sourceTree = SOURCE_ROOT; };
 		F9075FCF02238231E19455A8 /* Info-AU.plist */ /* Info-AU.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-AU.plist"; path = "Info-AU.plist"; sourceTree = SOURCE_ROOT; };
 		FC234187BE7BD9E58DF735BD /* AudioUnit.framework */ /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
@@ -214,18 +215,18 @@
 		0907A1D77581E61D6BC1E02D /* JUCE Modules */ = {
 			isa = PBXGroup;
 			children = (
-				C7979FFD14FE8E0C438DB731,
-				667E147790C5540D5387F3F6,
-				8CCFFDF679634BAD038AB032,
-				2DC4DBE4C76DAF36792D3D35,
-				543972E230B617DD381BF012,
-				3F5678C2366DC982B87FE07D,
-				95CFB0905DED7951C7256AB0,
-				CE4136CC1FEDD46C8100BC18,
-				CC06253DB54EAF77D9ACF1AA,
-				DA9B8E6275CDE167D0A04F5E,
-				939E1DADF499BBDE2C3AB3CC,
-				2601C5BC895EF63A4A337C8F,
+				8D416BF53B0E45CE6169B5CF,
+				3C2281032AEABDA4E56A6409,
+				ECDB38E875873E17A114D5CF,
+				68A798D319B34ED0797D7472,
+				9835FBE41E9FF7BEB15BE7AE,
+				4CF8D7EE9ABF513269375472,
+				6B356ED36CBBBA8924074CBF,
+				498CAE34D8FAEE91801A1A05,
+				265812DBE24338D2C90381E0,
+				48C8AF6556006CBA69A7D26C,
+				BE55002A64D9B2D581023EC0,
+				2819A805DFF68478676BE765,
 			);
 			name = "JUCE Modules";
 			sourceTree = "<group>";
@@ -257,7 +258,6 @@
 		4C7ED444706CA16AE7529F18 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				0F450B1855619DDE6FCAD32D,
 				337E5A12708DAC0DF56FB599,
 				5C430A6232264E8745A913BA,
 				3F2E7D4622139787F4A19FC9,
@@ -314,9 +314,28 @@
 		86C6DC72B53F1CE69540357E /* RTWaveNet */ = {
 			isa = PBXGroup;
 			children = (
+				B7D2838E95F5687B2E3AC36E,
 				4C7ED444706CA16AE7529F18,
 			);
 			name = RTWaveNet;
+			sourceTree = "<group>";
+		};
+		B7D2838E95F5687B2E3AC36E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C26D20D29F8C4F22C338C2F5,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C26D20D29F8C4F22C338C2F5 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				03648CC8D74DC4310459481D,
+				F1581BFC0553634E9BF136D9,
+				089FA8D74F59163FEFD0522E,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		D0A7D2E8C7DF09436193C802 /* JUCE Library Code */ = {
@@ -428,7 +447,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1300;
-				ORGANIZATIONNAME = "";
+				ORGANIZATIONNAME = "Ross Castledine";
 				TargetAttributes = {
 					54E87AE5CF5C9D3A3BDFE817 = {
 						SystemCapabilities = {
@@ -605,7 +624,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26EFAC2779735E21F17CDC9C,
 				7AEA2C167AA296A1F09EA13D,
 				6D3A4277A4E5278BEEE8EFD7,
 				8AABE81B3D7014881AE18DB4,
@@ -734,7 +752,7 @@
 					"JucePlugin_Enable_IAA=0",
 					"JucePlugin_Name=\\\"RTWaveNet\\\"",
 					"JucePlugin_Desc=\\\"RTWaveNet\\\"",
-					"JucePlugin_Manufacturer=\\\"yourcompany\\\"",
+					"JucePlugin_Manufacturer=\\\"Ross\\ Castledine\\\"",
 					"JucePlugin_ManufacturerWebsite=\\\"\\\"",
 					"JucePlugin_ManufacturerEmail=\\\"\\\"",
 					"JucePlugin_ManufacturerCode=0x4d616e75",
@@ -755,13 +773,13 @@
 					"JucePlugin_AUExportPrefix=RTWaveNetAU",
 					"JucePlugin_AUExportPrefixQuoted=\\\"RTWaveNetAU\\\"",
 					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
-					"JucePlugin_CFBundleIdentifier=com.yourcompany.RTWaveNet",
+					"JucePlugin_CFBundleIdentifier=com.RossCastledine.RTWaveNet",
 					"JucePlugin_RTASCategory=0",
 					"JucePlugin_RTASManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_RTASProductId=JucePlugin_PluginCode",
 					"JucePlugin_RTASDisableBypass=0",
 					"JucePlugin_RTASDisableMultiMono=0",
-					"JucePlugin_AAXIdentifier=com.yourcompany.RTWaveNet",
+					"JucePlugin_AAXIdentifier=com.RossCastledine.RTWaveNet",
 					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
 					"JucePlugin_AAXCategory=0",
@@ -769,7 +787,7 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757278",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"yourcompany:\\ RTWaveNet\\\"",
+					"JucePlugin_IAAName=\\\"Ross\\ Castledine:\\ RTWaveNet\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
@@ -779,21 +797,21 @@
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
-					"\"/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK\"",
+					"/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
 					"$(SRCROOT)/../../JuceLibraryCode",
-					"\"/Volumes/External SSD 1TB/Applications/JUCE/modules\"",
+					"/Applications/JUCE/modules",
 					"/usr/local/",
 					"/opt/homebrew/Cellar/nlohmann-json/3.10.5/include/",
-					"\"/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_audio_plugin_client\"",
+					"/Applications/JUCE/modules/juce_audio_plugin_client",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Info-Standalone_Plugin.plist;
 				INFOPLIST_PREPROCESS = NO;
 				LLVM_LTO = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MTL_HEADER_SEARCH_PATHS = "\"/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK\" $(SRCROOT)/../../JuceLibraryCode \"/Volumes/External SSD 1TB/Applications/JUCE/modules\" /usr/local/ /opt/homebrew/Cellar/nlohmann-json/3.10.5/include/ \"/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_audio_plugin_client\"";
+				MTL_HEADER_SEARCH_PATHS = "/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /Applications/JUCE/modules /usr/local/ /opt/homebrew/Cellar/nlohmann-json/3.10.5/include/ /Applications/JUCE/modules/juce_audio_plugin_client";
 				OTHER_LDFLAGS = "-lRTWaveNet";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.RTWaveNet;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RossCastledine.RTWaveNet;
 				PRODUCT_NAME = "RTWaveNet";
 				USE_HEADERMAP = NO;
 				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
@@ -844,7 +862,7 @@
 					"JucePlugin_Enable_IAA=0",
 					"JucePlugin_Name=\\\"RTWaveNet\\\"",
 					"JucePlugin_Desc=\\\"RTWaveNet\\\"",
-					"JucePlugin_Manufacturer=\\\"yourcompany\\\"",
+					"JucePlugin_Manufacturer=\\\"Ross\\ Castledine\\\"",
 					"JucePlugin_ManufacturerWebsite=\\\"\\\"",
 					"JucePlugin_ManufacturerEmail=\\\"\\\"",
 					"JucePlugin_ManufacturerCode=0x4d616e75",
@@ -865,13 +883,13 @@
 					"JucePlugin_AUExportPrefix=RTWaveNetAU",
 					"JucePlugin_AUExportPrefixQuoted=\\\"RTWaveNetAU\\\"",
 					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
-					"JucePlugin_CFBundleIdentifier=com.yourcompany.RTWaveNet",
+					"JucePlugin_CFBundleIdentifier=com.RossCastledine.RTWaveNet",
 					"JucePlugin_RTASCategory=0",
 					"JucePlugin_RTASManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_RTASProductId=JucePlugin_PluginCode",
 					"JucePlugin_RTASDisableBypass=0",
 					"JucePlugin_RTASDisableMultiMono=0",
-					"JucePlugin_AAXIdentifier=com.yourcompany.RTWaveNet",
+					"JucePlugin_AAXIdentifier=com.RossCastledine.RTWaveNet",
 					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
 					"JucePlugin_AAXCategory=0",
@@ -879,7 +897,7 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757278",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"yourcompany:\\ RTWaveNet\\\"",
+					"JucePlugin_IAAName=\\\"Ross\\ Castledine:\\ RTWaveNet\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
@@ -889,20 +907,20 @@
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
-					"\"/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK\"",
+					"/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
 					"$(SRCROOT)/../../JuceLibraryCode",
-					"\"/Volumes/External SSD 1TB/Applications/JUCE/modules\"",
+					"/Applications/JUCE/modules",
 					"/usr/local/",
 					"/opt/homebrew/Cellar/nlohmann-json/3.10.5/include/",
-					"\"/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_audio_plugin_client\"",
+					"/Applications/JUCE/modules/juce_audio_plugin_client",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Info-Standalone_Plugin.plist;
 				INFOPLIST_PREPROCESS = NO;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MTL_HEADER_SEARCH_PATHS = "\"/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK\" $(SRCROOT)/../../JuceLibraryCode \"/Volumes/External SSD 1TB/Applications/JUCE/modules\" /usr/local/ /opt/homebrew/Cellar/nlohmann-json/3.10.5/include/ \"/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_audio_plugin_client\"";
+				MTL_HEADER_SEARCH_PATHS = "/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /Applications/JUCE/modules /usr/local/ /opt/homebrew/Cellar/nlohmann-json/3.10.5/include/ /Applications/JUCE/modules/juce_audio_plugin_client";
 				OTHER_LDFLAGS = "-lRTWaveNet";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.RTWaveNet;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RossCastledine.RTWaveNet;
 				PRODUCT_NAME = "RTWaveNet";
 				USE_HEADERMAP = NO;
 				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
@@ -955,7 +973,7 @@
 					"JucePlugin_Enable_IAA=0",
 					"JucePlugin_Name=\\\"RTWaveNet\\\"",
 					"JucePlugin_Desc=\\\"RTWaveNet\\\"",
-					"JucePlugin_Manufacturer=\\\"yourcompany\\\"",
+					"JucePlugin_Manufacturer=\\\"Ross\\ Castledine\\\"",
 					"JucePlugin_ManufacturerWebsite=\\\"\\\"",
 					"JucePlugin_ManufacturerEmail=\\\"\\\"",
 					"JucePlugin_ManufacturerCode=0x4d616e75",
@@ -976,13 +994,13 @@
 					"JucePlugin_AUExportPrefix=RTWaveNetAU",
 					"JucePlugin_AUExportPrefixQuoted=\\\"RTWaveNetAU\\\"",
 					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
-					"JucePlugin_CFBundleIdentifier=com.yourcompany.RTWaveNet",
+					"JucePlugin_CFBundleIdentifier=com.RossCastledine.RTWaveNet",
 					"JucePlugin_RTASCategory=0",
 					"JucePlugin_RTASManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_RTASProductId=JucePlugin_PluginCode",
 					"JucePlugin_RTASDisableBypass=0",
 					"JucePlugin_RTASDisableMultiMono=0",
-					"JucePlugin_AAXIdentifier=com.yourcompany.RTWaveNet",
+					"JucePlugin_AAXIdentifier=com.RossCastledine.RTWaveNet",
 					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
 					"JucePlugin_AAXCategory=0",
@@ -990,7 +1008,7 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757278",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"yourcompany:\\ RTWaveNet\\\"",
+					"JucePlugin_IAAName=\\\"Ross\\ Castledine:\\ RTWaveNet\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
@@ -1001,12 +1019,12 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GENERATE_PKGINFO_FILE = YES;
 				HEADER_SEARCH_PATHS = (
-					"\"/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK\"",
+					"/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
 					"$(SRCROOT)/../../JuceLibraryCode",
-					"\"/Volumes/External SSD 1TB/Applications/JUCE/modules\"",
+					"/Applications/JUCE/modules",
 					"/usr/local/",
 					"/opt/homebrew/Cellar/nlohmann-json/3.10.5/include/",
-					"\"/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_audio_plugin_client\"",
+					"/Applications/JUCE/modules/juce_audio_plugin_client",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Info-VST3.plist;
@@ -1015,9 +1033,9 @@
 				LIBRARY_STYLE = Bundle;
 				LLVM_LTO = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MTL_HEADER_SEARCH_PATHS = "\"/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK\" $(SRCROOT)/../../JuceLibraryCode \"/Volumes/External SSD 1TB/Applications/JUCE/modules\" /usr/local/ /opt/homebrew/Cellar/nlohmann-json/3.10.5/include/ \"/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_audio_plugin_client\"";
+				MTL_HEADER_SEARCH_PATHS = "/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /Applications/JUCE/modules /usr/local/ /opt/homebrew/Cellar/nlohmann-json/3.10.5/include/ /Applications/JUCE/modules/juce_audio_plugin_client";
 				OTHER_LDFLAGS = "-bundle -lRTWaveNet";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.RTWaveNet;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RossCastledine.RTWaveNet;
 				PRODUCT_NAME = "RTWaveNet";
 				USE_HEADERMAP = NO;
 				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
@@ -1077,7 +1095,7 @@
 					"JucePlugin_Enable_IAA=0",
 					"JucePlugin_Name=\\\"RTWaveNet\\\"",
 					"JucePlugin_Desc=\\\"RTWaveNet\\\"",
-					"JucePlugin_Manufacturer=\\\"yourcompany\\\"",
+					"JucePlugin_Manufacturer=\\\"Ross\\ Castledine\\\"",
 					"JucePlugin_ManufacturerWebsite=\\\"\\\"",
 					"JucePlugin_ManufacturerEmail=\\\"\\\"",
 					"JucePlugin_ManufacturerCode=0x4d616e75",
@@ -1098,13 +1116,13 @@
 					"JucePlugin_AUExportPrefix=RTWaveNetAU",
 					"JucePlugin_AUExportPrefixQuoted=\\\"RTWaveNetAU\\\"",
 					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
-					"JucePlugin_CFBundleIdentifier=com.yourcompany.RTWaveNet",
+					"JucePlugin_CFBundleIdentifier=com.RossCastledine.RTWaveNet",
 					"JucePlugin_RTASCategory=0",
 					"JucePlugin_RTASManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_RTASProductId=JucePlugin_PluginCode",
 					"JucePlugin_RTASDisableBypass=0",
 					"JucePlugin_RTASDisableMultiMono=0",
-					"JucePlugin_AAXIdentifier=com.yourcompany.RTWaveNet",
+					"JucePlugin_AAXIdentifier=com.RossCastledine.RTWaveNet",
 					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
 					"JucePlugin_AAXCategory=0",
@@ -1112,7 +1130,7 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757278",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"yourcompany:\\ RTWaveNet\\\"",
+					"JucePlugin_IAAName=\\\"Ross\\ Castledine:\\ RTWaveNet\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
@@ -1123,18 +1141,18 @@
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
-					"\"/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK\"",
+					"/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
 					"$(SRCROOT)/../../JuceLibraryCode",
-					"\"/Volumes/External SSD 1TB/Applications/JUCE/modules\"",
+					"/Applications/JUCE/modules",
 					"/usr/local/",
 					"/opt/homebrew/Cellar/nlohmann-json/3.10.5/include/",
-					"\"/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_audio_plugin_client\"",
+					"/Applications/JUCE/modules/juce_audio_plugin_client",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MTL_HEADER_SEARCH_PATHS = "\"/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK\" $(SRCROOT)/../../JuceLibraryCode \"/Volumes/External SSD 1TB/Applications/JUCE/modules\" /usr/local/ /opt/homebrew/Cellar/nlohmann-json/3.10.5/include/ \"/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_audio_plugin_client\"";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.RTWaveNet;
+				MTL_HEADER_SEARCH_PATHS = "/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /Applications/JUCE/modules /usr/local/ /opt/homebrew/Cellar/nlohmann-json/3.10.5/include/ /Applications/JUCE/modules/juce_audio_plugin_client";
+				PRODUCT_BUNDLE_IDENTIFIER = com.RossCastledine.RTWaveNet;
 				PRODUCT_NAME = "RTWaveNet";
 				SKIP_INSTALL = YES;
 				USE_HEADERMAP = NO;
@@ -1188,7 +1206,7 @@
 					"JucePlugin_Enable_IAA=0",
 					"JucePlugin_Name=\\\"RTWaveNet\\\"",
 					"JucePlugin_Desc=\\\"RTWaveNet\\\"",
-					"JucePlugin_Manufacturer=\\\"yourcompany\\\"",
+					"JucePlugin_Manufacturer=\\\"Ross\\ Castledine\\\"",
 					"JucePlugin_ManufacturerWebsite=\\\"\\\"",
 					"JucePlugin_ManufacturerEmail=\\\"\\\"",
 					"JucePlugin_ManufacturerCode=0x4d616e75",
@@ -1209,13 +1227,13 @@
 					"JucePlugin_AUExportPrefix=RTWaveNetAU",
 					"JucePlugin_AUExportPrefixQuoted=\\\"RTWaveNetAU\\\"",
 					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
-					"JucePlugin_CFBundleIdentifier=com.yourcompany.RTWaveNet",
+					"JucePlugin_CFBundleIdentifier=com.RossCastledine.RTWaveNet",
 					"JucePlugin_RTASCategory=0",
 					"JucePlugin_RTASManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_RTASProductId=JucePlugin_PluginCode",
 					"JucePlugin_RTASDisableBypass=0",
 					"JucePlugin_RTASDisableMultiMono=0",
-					"JucePlugin_AAXIdentifier=com.yourcompany.RTWaveNet",
+					"JucePlugin_AAXIdentifier=com.RossCastledine.RTWaveNet",
 					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
 					"JucePlugin_AAXCategory=0",
@@ -1223,7 +1241,7 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757278",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"yourcompany:\\ RTWaveNet\\\"",
+					"JucePlugin_IAAName=\\\"Ross\\ Castledine:\\ RTWaveNet\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
@@ -1234,12 +1252,12 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GENERATE_PKGINFO_FILE = YES;
 				HEADER_SEARCH_PATHS = (
-					"\"/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK\"",
+					"/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
 					"$(SRCROOT)/../../JuceLibraryCode",
-					"\"/Volumes/External SSD 1TB/Applications/JUCE/modules\"",
+					"/Applications/JUCE/modules",
 					"/usr/local/",
 					"/opt/homebrew/Cellar/nlohmann-json/3.10.5/include/",
-					"\"/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_audio_plugin_client\"",
+					"/Applications/JUCE/modules/juce_audio_plugin_client",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Info-AU.plist;
@@ -1247,10 +1265,10 @@
 				INSTALL_PATH = "$(HOME)/Library/Audio/Plug-Ins/Components/";
 				LIBRARY_STYLE = Bundle;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MTL_HEADER_SEARCH_PATHS = "\"/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK\" $(SRCROOT)/../../JuceLibraryCode \"/Volumes/External SSD 1TB/Applications/JUCE/modules\" /usr/local/ /opt/homebrew/Cellar/nlohmann-json/3.10.5/include/ \"/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_audio_plugin_client\"";
+				MTL_HEADER_SEARCH_PATHS = "/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /Applications/JUCE/modules /usr/local/ /opt/homebrew/Cellar/nlohmann-json/3.10.5/include/ /Applications/JUCE/modules/juce_audio_plugin_client";
 				OTHER_LDFLAGS = "-bundle -lRTWaveNet";
 				OTHER_REZFLAGS = "-d ppc_$ppc -d i386_$i386 -d ppc64_$ppc64 -d x86_64_$x86_64 -d arm64_$arm64 -I /System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers -I \"$(DEVELOPER_DIR)/Extras/CoreAudio/AudioUnits/AUPublic/AUBase\" -I \"$(DEVELOPER_DIR)/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AudioUnit.framework/Headers\"";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.RTWaveNet;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RossCastledine.RTWaveNet;
 				PRODUCT_NAME = "RTWaveNet";
 				USE_HEADERMAP = NO;
 				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
@@ -1302,7 +1320,7 @@
 					"JucePlugin_Enable_IAA=0",
 					"JucePlugin_Name=\\\"RTWaveNet\\\"",
 					"JucePlugin_Desc=\\\"RTWaveNet\\\"",
-					"JucePlugin_Manufacturer=\\\"yourcompany\\\"",
+					"JucePlugin_Manufacturer=\\\"Ross\\ Castledine\\\"",
 					"JucePlugin_ManufacturerWebsite=\\\"\\\"",
 					"JucePlugin_ManufacturerEmail=\\\"\\\"",
 					"JucePlugin_ManufacturerCode=0x4d616e75",
@@ -1323,13 +1341,13 @@
 					"JucePlugin_AUExportPrefix=RTWaveNetAU",
 					"JucePlugin_AUExportPrefixQuoted=\\\"RTWaveNetAU\\\"",
 					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
-					"JucePlugin_CFBundleIdentifier=com.yourcompany.RTWaveNet",
+					"JucePlugin_CFBundleIdentifier=com.RossCastledine.RTWaveNet",
 					"JucePlugin_RTASCategory=0",
 					"JucePlugin_RTASManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_RTASProductId=JucePlugin_PluginCode",
 					"JucePlugin_RTASDisableBypass=0",
 					"JucePlugin_RTASDisableMultiMono=0",
-					"JucePlugin_AAXIdentifier=com.yourcompany.RTWaveNet",
+					"JucePlugin_AAXIdentifier=com.RossCastledine.RTWaveNet",
 					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
 					"JucePlugin_AAXCategory=0",
@@ -1337,7 +1355,7 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757278",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"yourcompany:\\ RTWaveNet\\\"",
+					"JucePlugin_IAAName=\\\"Ross\\ Castledine:\\ RTWaveNet\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
@@ -1348,19 +1366,19 @@
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
-					"\"/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK\"",
+					"/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
 					"$(SRCROOT)/../../JuceLibraryCode",
-					"\"/Volumes/External SSD 1TB/Applications/JUCE/modules\"",
+					"/Applications/JUCE/modules",
 					"/usr/local/",
 					"/opt/homebrew/Cellar/nlohmann-json/3.10.5/include/",
-					"\"/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_audio_plugin_client\"",
+					"/Applications/JUCE/modules/juce_audio_plugin_client",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				LLVM_LTO = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MTL_HEADER_SEARCH_PATHS = "\"/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK\" $(SRCROOT)/../../JuceLibraryCode \"/Volumes/External SSD 1TB/Applications/JUCE/modules\" /usr/local/ /opt/homebrew/Cellar/nlohmann-json/3.10.5/include/ \"/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_audio_plugin_client\"";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.RTWaveNet;
+				MTL_HEADER_SEARCH_PATHS = "/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /Applications/JUCE/modules /usr/local/ /opt/homebrew/Cellar/nlohmann-json/3.10.5/include/ /Applications/JUCE/modules/juce_audio_plugin_client";
+				PRODUCT_BUNDLE_IDENTIFIER = com.RossCastledine.RTWaveNet;
 				PRODUCT_NAME = "RTWaveNet";
 				SKIP_INSTALL = YES;
 				USE_HEADERMAP = NO;
@@ -1470,7 +1488,7 @@
 					"JucePlugin_Enable_IAA=0",
 					"JucePlugin_Name=\\\"RTWaveNet\\\"",
 					"JucePlugin_Desc=\\\"RTWaveNet\\\"",
-					"JucePlugin_Manufacturer=\\\"yourcompany\\\"",
+					"JucePlugin_Manufacturer=\\\"Ross\\ Castledine\\\"",
 					"JucePlugin_ManufacturerWebsite=\\\"\\\"",
 					"JucePlugin_ManufacturerEmail=\\\"\\\"",
 					"JucePlugin_ManufacturerCode=0x4d616e75",
@@ -1491,13 +1509,13 @@
 					"JucePlugin_AUExportPrefix=RTWaveNetAU",
 					"JucePlugin_AUExportPrefixQuoted=\\\"RTWaveNetAU\\\"",
 					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
-					"JucePlugin_CFBundleIdentifier=com.yourcompany.RTWaveNet",
+					"JucePlugin_CFBundleIdentifier=com.RossCastledine.RTWaveNet",
 					"JucePlugin_RTASCategory=0",
 					"JucePlugin_RTASManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_RTASProductId=JucePlugin_PluginCode",
 					"JucePlugin_RTASDisableBypass=0",
 					"JucePlugin_RTASDisableMultiMono=0",
-					"JucePlugin_AAXIdentifier=com.yourcompany.RTWaveNet",
+					"JucePlugin_AAXIdentifier=com.RossCastledine.RTWaveNet",
 					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
 					"JucePlugin_AAXCategory=0",
@@ -1505,7 +1523,7 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757278",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"yourcompany:\\ RTWaveNet\\\"",
+					"JucePlugin_IAAName=\\\"Ross\\ Castledine:\\ RTWaveNet\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
@@ -1516,12 +1534,12 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GENERATE_PKGINFO_FILE = YES;
 				HEADER_SEARCH_PATHS = (
-					"\"/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK\"",
+					"/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
 					"$(SRCROOT)/../../JuceLibraryCode",
-					"\"/Volumes/External SSD 1TB/Applications/JUCE/modules\"",
+					"/Applications/JUCE/modules",
 					"/usr/local/",
 					"/opt/homebrew/Cellar/nlohmann-json/3.10.5/include/",
-					"\"/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_audio_plugin_client\"",
+					"/Applications/JUCE/modules/juce_audio_plugin_client",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Info-VST3.plist;
@@ -1529,9 +1547,9 @@
 				INSTALL_PATH = "$(HOME)/Library/Audio/Plug-Ins/VST3/";
 				LIBRARY_STYLE = Bundle;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MTL_HEADER_SEARCH_PATHS = "\"/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK\" $(SRCROOT)/../../JuceLibraryCode \"/Volumes/External SSD 1TB/Applications/JUCE/modules\" /usr/local/ /opt/homebrew/Cellar/nlohmann-json/3.10.5/include/ \"/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_audio_plugin_client\"";
+				MTL_HEADER_SEARCH_PATHS = "/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /Applications/JUCE/modules /usr/local/ /opt/homebrew/Cellar/nlohmann-json/3.10.5/include/ /Applications/JUCE/modules/juce_audio_plugin_client";
 				OTHER_LDFLAGS = "-bundle -lRTWaveNet";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.RTWaveNet;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RossCastledine.RTWaveNet;
 				PRODUCT_NAME = "RTWaveNet";
 				USE_HEADERMAP = NO;
 				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
@@ -1585,7 +1603,7 @@
 					"JucePlugin_Enable_IAA=0",
 					"JucePlugin_Name=\\\"RTWaveNet\\\"",
 					"JucePlugin_Desc=\\\"RTWaveNet\\\"",
-					"JucePlugin_Manufacturer=\\\"yourcompany\\\"",
+					"JucePlugin_Manufacturer=\\\"Ross\\ Castledine\\\"",
 					"JucePlugin_ManufacturerWebsite=\\\"\\\"",
 					"JucePlugin_ManufacturerEmail=\\\"\\\"",
 					"JucePlugin_ManufacturerCode=0x4d616e75",
@@ -1606,13 +1624,13 @@
 					"JucePlugin_AUExportPrefix=RTWaveNetAU",
 					"JucePlugin_AUExportPrefixQuoted=\\\"RTWaveNetAU\\\"",
 					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
-					"JucePlugin_CFBundleIdentifier=com.yourcompany.RTWaveNet",
+					"JucePlugin_CFBundleIdentifier=com.RossCastledine.RTWaveNet",
 					"JucePlugin_RTASCategory=0",
 					"JucePlugin_RTASManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_RTASProductId=JucePlugin_PluginCode",
 					"JucePlugin_RTASDisableBypass=0",
 					"JucePlugin_RTASDisableMultiMono=0",
-					"JucePlugin_AAXIdentifier=com.yourcompany.RTWaveNet",
+					"JucePlugin_AAXIdentifier=com.RossCastledine.RTWaveNet",
 					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
 					"JucePlugin_AAXCategory=0",
@@ -1620,7 +1638,7 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757278",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"yourcompany:\\ RTWaveNet\\\"",
+					"JucePlugin_IAAName=\\\"Ross\\ Castledine:\\ RTWaveNet\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
@@ -1631,12 +1649,12 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GENERATE_PKGINFO_FILE = YES;
 				HEADER_SEARCH_PATHS = (
-					"\"/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK\"",
+					"/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
 					"$(SRCROOT)/../../JuceLibraryCode",
-					"\"/Volumes/External SSD 1TB/Applications/JUCE/modules\"",
+					"/Applications/JUCE/modules",
 					"/usr/local/",
 					"/opt/homebrew/Cellar/nlohmann-json/3.10.5/include/",
-					"\"/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_audio_plugin_client\"",
+					"/Applications/JUCE/modules/juce_audio_plugin_client",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Info-AU.plist;
@@ -1645,10 +1663,10 @@
 				LIBRARY_STYLE = Bundle;
 				LLVM_LTO = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MTL_HEADER_SEARCH_PATHS = "\"/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK\" $(SRCROOT)/../../JuceLibraryCode \"/Volumes/External SSD 1TB/Applications/JUCE/modules\" /usr/local/ /opt/homebrew/Cellar/nlohmann-json/3.10.5/include/ \"/Volumes/External SSD 1TB/Applications/JUCE/modules/juce_audio_plugin_client\"";
+				MTL_HEADER_SEARCH_PATHS = "/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /Applications/JUCE/modules /usr/local/ /opt/homebrew/Cellar/nlohmann-json/3.10.5/include/ /Applications/JUCE/modules/juce_audio_plugin_client";
 				OTHER_LDFLAGS = "-bundle -lRTWaveNet";
 				OTHER_REZFLAGS = "-d ppc_$ppc -d i386_$i386 -d ppc64_$ppc64 -d x86_64_$x86_64 -d arm64_$arm64 -I /System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers -I \"$(DEVELOPER_DIR)/Extras/CoreAudio/AudioUnits/AUPublic/AUBase\" -I \"$(DEVELOPER_DIR)/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AudioUnit.framework/Headers\"";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.RTWaveNet;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RossCastledine.RTWaveNet;
 				PRODUCT_NAME = "RTWaveNet";
 				USE_HEADERMAP = NO;
 				VALID_ARCHS = "i386 x86_64 arm64 arm64e";

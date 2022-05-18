@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <JUCERPROJECT id="TvImXr" name="RTWaveNet" projectType="audioplug" useAppConfig="0"
-              addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1"
-              headerPath="/usr/local/&#10;/opt/homebrew/Cellar/nlohmann-json/3.10.5/include/">
+              addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" headerPath="/usr/local/&#10;/opt/homebrew/Cellar/nlohmann-json/3.10.5/include/"
+              companyName="Ross Castledine" displaySplashScreen="1">
   <MAINGROUP id="F7NY0r" name="RTWaveNet">
+    <GROUP id="{5C1D252D-899D-2BFA-C0B3-DD17C4C1E993}" name="Resources">
+      <GROUP id="{AE1187A7-1775-5531-D513-64BAB007C532}" name="Images">
+        <FILE id="FOChkX" name="screwhead.png" compile="0" resource="1" file="Resources/Images/screwhead.png"/>
+        <FILE id="MU4GzU" name="org_amp.png" compile="0" resource="1" file="Resources/Images/org_amp.png"/>
+        <FILE id="BYmWOV" name="WaveNetAmp.png" compile="0" resource="1" file="Resources/Images/WaveNetAmp.png"/>
+      </GROUP>
+    </GROUP>
     <GROUP id="{F70FC1F2-88FF-B0A4-C434-9C17AEA8C907}" name="Source">
-      <FILE id="p66yEu" name="Knob.cpp" compile="1" resource="0" file="Source/Knob.cpp"/>
       <FILE id="Omp4bK" name="Knob.h" compile="0" resource="0" file="Source/Knob.h"/>
       <FILE id="U6TJJU" name="ConvolutionStack.cpp" compile="1" resource="0"
             file="Source/ConvolutionStack.cpp"/>

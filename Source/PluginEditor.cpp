@@ -34,6 +34,15 @@ RTWaveNetAudioProcessorEditor::RTWaveNetAudioProcessorEditor (RTWaveNetAudioProc
     outGain->setValue(0.0);
     outGain->addListener(this);
     addAndMakeVisible(outGain);
+    
+    trim->setSliderStyle(juce::Slider::RotaryVerticalDrag);
+    trim->setRange(-36.0, 0.0, 0.1);
+    trim->setTextBoxStyle(juce::Slider::NoTextBox, false, 90, 0);
+    trim->setPopupDisplayEnabled(true, false, this);
+    trim->setTextValueSuffix(" dB");
+    trim->setValue(0.0);
+    trim->addListener(this);
+    addAndMakeVisible(trim);
 }
 
 RTWaveNetAudioProcessorEditor::~RTWaveNetAudioProcessorEditor()
@@ -53,10 +62,12 @@ void RTWaveNetAudioProcessorEditor::resized()
     // subcomponents in your editor..
     inGain->setBounds(366, 251, inGain->getFilmStripWidth(), inGain->getFilmStripWidth());
     outGain->setBounds(464, 251, outGain->getFilmStripWidth(), outGain->getFilmStripWidth());
+    trim->setBounds(206, 270, trim->getFilmStripWidth(), trim->getFilmStripWidth());
 }
 
 void RTWaveNetAudioProcessorEditor::sliderValueChanged(juce::Slider *slider)
 {
     audioProcessor.addedInGain = inGain->getValue();
     audioProcessor.addedOutGain = outGain->getValue();
+    audioProcessor.trimVal = trim->getValue();
 }
